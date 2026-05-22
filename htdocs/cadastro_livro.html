@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Cadastro de Livro — SmartLibrary</title>
+  <link rel="stylesheet" href="frontend/css/style.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container">
+      <div class="brand">
+        <a href="index.php" class="logo_smart" aria-label="Smart Library">
+        <img src="img/logo_smartlibrary.png" alt="Smart Library">
+        </a>
+        <h3 style="text-align:left; margin:0 0 1rem;color:var(--accent-dark)">E.E. Deputado Silva Prado</h3>
+      </div>
+    </div>
+  </header>
+    
+  <main style="margin-top:20px;">
+    <section class="cards">
+      <div class="container">
+        <h2 style="text-align:center; margin:0 0 1rem;">Cadastro de Livro</h2>
+        <div class="card">
+          <form name="form1" action="/cadastro_livro.php" method="post">
+            <div style="display:grid; gap:0.75rem; grid-template-columns:1fr; max-width:600px; margin:0 auto">
+              <label>ISBN
+                <input type="text" id="isbnLivro" name="isbnLivro" style="width: 30%; padding: 4px;" required placeholder="Digite o ISBN" />
+              </label>
+              <label>Título
+                <input type="text" id="tituloLivro" name="tituloLivro" style="width: 70%; padding: 4px;"required placeholder="Digite o Título do Livro" />
+              </label>
+              <label>Autor
+                <input type="text" id="autorLivro" name="autorLivro" style="width: 70%; padding: 4px;"required placeholder="Digite o Nome do Autor" />
+              </label>
+              <label>Editora
+                <input type="text" id="editoraLivro" name="editoraLivro" style="width: 50%; padding: 4px;"required placeholder="Digite o Nome da Editora" />
+              </label>
+              <div style="display:flex;gap:0.5rem;justify-content:center;margin-top:0.5rem">
+                <button class="btn" type="submit" name="acao" value="INSERT">Inserir</button>
+                <button class="btn" type="submit" name="acao" value="UPDATE">Modificar</button>
+                <button class="btn" type="submit" name="acao" value="DELETE">Excluir</button>
+              </div>
+            </div>
+          </form>
+        </div>
+        <div style="text-align:center;margin-top:1rem">
+          <a class="btn" href="index.php">Voltar ao Início</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© SmartLibrary — Biblioteca Virtual</p>
+    </div>
+  </footer>
+</body>
+</html>

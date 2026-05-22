@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Cadastro de Alunos — SmartLibrary</title>
+  <link rel="stylesheet" href="frontend/css/style.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container">
+      <div class="brand">
+        <a href="index.php" class="logo_smart" aria-label="Smart Library">
+        <img src="img/logo_smartlibrary.png" alt="Smart Library">
+        </a>
+        <h3 style="text-align:left; margin:0 0 1rem;color:var(--accent-dark)">E.E. Deputado Silva Prado</h3>
+      </div>
+    </div>
+  </header>
+
+  <main style="margin-top:20px;">
+    <section class="cards">
+      <div class="container">
+        <h2 style="text-align:center; margin:0 0 1rem;">Cadastro de Alunos</h2>
+        <div class="card">
+          <form name="form2" action="/cadastro_aluno.php" method="POST">
+        <div style="display:grid; gap:0.75rem; grid-template-columns:1fr; max-width:600px; margin:0 auto">
+              <label>RA
+                <input type="text" name="raAluno" id="raAluno" style="width: 40%; padding: 4px;" required placeholder="Digite o RA" />
+              </label> 
+              </label>
+              <label>Nome
+                <input type="text" name="nomeAluno" id="nomeAluno" style="width: 80%; padding: 4px;" required placeholder="Digite o Nome" />
+              </label>
+              <label>Data de Nascimento
+                <input type="date" name="dtNascimentoAluno" id="dtNascimentoAluno" style="width: 30%; padding: 4px;" required />
+              </label>
+              <label>Tipo de Ensino
+                <input type="text" name="tpEnsinoAluno" id="tpEnsinoAluno" style="width: 30%; padding: 4px;" required placeholder="Digite o Ensino" />
+              </label>
+              <label>Turma
+                <input type="text" name="turmaAluno" id="turmaAluno" style="width: 30%; padding: 4px;" required placeholder="Digite a Turma" />
+              </label>
+              <div style="display:flex;gap:0.5rem;justify-content:center;margin-top:0.5rem">
+                <button class="btn" type="submit" name="acao" value="INSERT">Inserir</button>
+                <button class="btn" type="submit" name="acao" value="UPDATE">Modificar</button>
+                <button class="btn" type="submit" name="acao" value="DELETE">Excluir</button>
+              </div>
+            </div>
+          </form>
+        </div>
+        <div style="text-align:center;margin-top:1rem">
+          <a class="btn" href="index.php">Voltar ao Início</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© SmartLibrary — Biblioteca Virtual</p>
+    </div>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Controle de Empréstimo — SmartLibrary</title>
+  <link rel="stylesheet" href="frontend/css/style.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container">
+      <div class="brand">
+        <a href="index.php" class="logo_smart" aria-label="Smart Library">
+        <img src="img/logo_smartlibrary.png" alt="Smart Library">
+        </a>
+        <h3 style="text-align:left; margin:0 0 1rem;color:var(--accent-dark)">E.E. Deputado Silva Prado</h3>
+      </div>
+    </div>
+  </header>
+
+  <main style="margin-top:20px;">
+    <section class="cards">
+      <div class="container">
+        <h2 style="text-align:center; margin:0 0 1rem;">Controle de Empréstimo</h2>
+        <div class="card">
+          <form name="form3" action="/controle_emprestimo.php" method="POST">
+            <div style="display:grid; gap:0.75rem; grid-template-columns:1fr; max-width:600px; margin:0 auto">
+              <label>RA
+                <input type="text" name="raAluno" id="raAluno" style="width: 40%; padding: 4px;" required placeholder="Digite o RA" />
+              </label>
+              <label>ISBN
+                <input type="text" id="isbnLivro" name="isbnLivro" style="width: 30%; padding: 4px;" required placeholder="Digite o ISBN" />
+              </label>
+              <div style="display:flex;gap:0.5rem;justify-content:center;margin-top:0.5rem">
+                <button class="btn" type="submit" name="acao" value="EMPRESTIMO">Empréstimo</button>
+                <button class="btn" type="submit" name="acao" value="DEVOLUCAO">Devolução</button>
+              </div>
+            </div>
+          </form>
+        </div>
+        <div style="text-align:center;margin-top:1rem">
+          <a class="btn" href="index.php">Voltar ao Início</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© SmartLibrary — Biblioteca Virtual</p>
+    </div>
+  </footer>
+</body>
+</html>
